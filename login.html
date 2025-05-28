@@ -1,16 +1,84 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>后台登录</title>
-	</head>
-	<body>
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>后台登录</title>
+	<style>
+		body {
+			background: #f5f6fa;
+			font-family: "Segoe UI", "Arial", "Microsoft YaHei", sans-serif;
+		}
+
+		.login-container {
+			width: 340px;
+			margin: 100px auto;
+			padding: 32px 28px 24px 28px;
+			background: #fff;
+			border-radius: 8px;
+			box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+		}
+
+		.login-container h2 {
+			text-align: center;
+			margin-bottom: 24px;
+			color: #333;
+			font-weight: 400;
+		}
+
+		.login-container label {
+			display: block;
+			margin-bottom: 6px;
+			color: #555;
+		}
+
+		.login-container input[type="text"],
+		.login-container input[type="password"] {
+			width: 100%;
+			padding: 8px 10px;
+			margin-bottom: 18px;
+			border: 1px solid #dcdcdc;
+			border-radius: 4px;
+			font-size: 15px;
+			box-sizing: border-box;
+			transition: border-color 0.2s;
+		}
+
+		.login-container input[type="text"]:focus,
+		.login-container input[type="password"]:focus {
+			border-color: #409eff;
+			outline: none;
+		}
+
+		.login-container input[type="submit"] {
+			width: 100%;
+			padding: 10px 0;
+			background: #409eff;
+			color: #fff;
+			border: none;
+			border-radius: 4px;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background 0.2s;
+		}
+
+		.login-container input[type="submit"]:hover {
+			background: #3077cc;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="login-container">
+		<h2>后台登录</h2>
 		<form method="post" action="./admin.php?a=login">
-			<span>用户名:</span><input type="text" name="username">
-			<br>
-			<span>密码:</span><input type="password" name="password">
-			<br>
+			<label for="username">用户名:</label>
+			<input type="text" name="username" id="username" autocomplete="username">
+			<label for="password">密码:</label>
+			<input type="password" name="password" id="password" autocomplete="current-password">
 			<input type="submit" value="登录">
 		</form>
-	</body>
+	</div>
+</body>
+
 </html>
